@@ -61,6 +61,8 @@ class CounterView: UIView {
         outlineColor.setStroke()
         outlinePath.lineWidth = Self.lineWidth
         outlinePath.stroke()
+
+        drawMarkers(CGRectMake(0, (rect.height - diameter) / 2, diameter, diameter), start: start, end: end)
     }
 
     override init(frame: CGRect) {
@@ -96,6 +98,29 @@ class CounterView: UIView {
         label.text = "\(counter)"
         label.textAlignment = .center
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+    }
+
+    private func drawMarkers(_ rect: CGRect, start: CGFloat, end: CGFloat) {
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        context.saveGState()
+        outlineColor.setFill()
+        let markerWidth: CGFloat = 5.0
+        let markerSize: CGFloat = 10.0
+
+        let markerPath = UIBezierPath(rect: CGRectMake(-markerWidth / 2, 0, markerWidth, markerSize))
+        context.translateBy(x: rect.minX + rect.width / 2, y: rect.minY + rect.height / 2)
+
+        let angleDifference: CGFloat = 2 * .pi - start + end
+        let arcLengthPerGlass = angleDifference / CGFloat(Self.numberOfGlasses)
+        for i in 1...Self.numberOfGlasses {
+            context.saveGState()
+            let angle = arcLengthPerGlass * CGFloat(i) + start - .pi / 2
+            context.rotate(by: angle)
+            context.translateBy(x: 0, y: rect.height / 2 - markerSize)
+            markerPath.fill()
+            context.restoreGState()
+        }
+        context.restoreGState()
     }
 }
 

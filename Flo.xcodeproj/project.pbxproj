@@ -19,6 +19,7 @@
 		A3236301299D415E00E6C6C3 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3236300299D415E00E6C6C3 /* CounterView.swift */; };
 		A3236303299D481D00E6C6C3 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3236302299D481D00E6C6C3 /* PushButton.swift */; };
 		A3236307299EE47C00E6C6C3 /* MainViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3236306299EE47C00E6C6C3 /* MainViewController+Actions.swift */; };
+		A3236309299EEF1C00E6C6C3 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3236308299EEF1C00E6C6C3 /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A3236300299D415E00E6C6C3 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		A3236302299D481D00E6C6C3 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		A3236306299EE47C00E6C6C3 /* MainViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Actions.swift"; sourceTree = "<group>"; };
+		A3236308299EEF1C00E6C6C3 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				A3236300299D415E00E6C6C3 /* CounterView.swift */,
+				A3236308299EEF1C00E6C6C3 /* GraphView.swift */,
 				A3236302299D481D00E6C6C3 /* PushButton.swift */,
 			);
 			path = Views;
@@ -182,6 +185,7 @@
 				A3236307299EE47C00E6C6C3 /* MainViewController+Actions.swift in Sources */,
 				A32362FB299D405400E6C6C3 /* UILayoutPriority+Constants.swift in Sources */,
 				A32362E6299D391100E6C6C3 /* MainViewController.swift in Sources */,
+				A3236309299EEF1C00E6C6C3 /* GraphView.swift in Sources */,
 				A3236303299D481D00E6C6C3 /* PushButton.swift in Sources */,
 				A32362FD299D405B00E6C6C3 /* ConstraintConsts.swift in Sources */,
 				A32362F7299D403A00E6C6C3 /* UIView+Preview.swift in Sources */,

@@ -19,4 +19,13 @@ extension MainViewController {
             }
         }
     }
+
+    @objc func didTapView(_ sender: UITapGestureRecognizer) {
+        let from = isGraphViewShowing ? graphView : counterView
+        let to = isGraphViewShowing ? counterView : graphView
+
+        UIView.transition(from: from, to: to, duration: 1, options: [.transitionFlipFromRight, .showHideTransitionViews])
+
+        isGraphViewShowing.toggle()
+    }
 }
