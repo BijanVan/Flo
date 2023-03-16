@@ -14,6 +14,7 @@ class CounterView: UIView {
 
     // MARK: Properties
     let label = UILabel()
+    let medalView = MedalView()
 
     var counter: Int = 5 {
         didSet {
@@ -78,8 +79,10 @@ class CounterView: UIView {
     // MARK: Private functions
     private func prepareSubviews() {
         label.translatesAutoresizingMaskIntoConstraints = false
+        medalView.translatesAutoresizingMaskIntoConstraints = false
 
         addSubview(label)
+        addSubview(medalView)
 
         NSLayoutConstraint.activate([
             widthAnchor.constraint(greaterThanOrEqualToConstant: defaultSize),
@@ -89,6 +92,13 @@ class CounterView: UIView {
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: centerXAnchor),
             label.centerYAnchor.constraint(equalTo: centerYAnchor),
+        ])
+
+        NSLayoutConstraint.activate([
+            medalView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: Self.arcWidth / 2 - Self.lineWidth),
+            medalView.heightAnchor.constraint(equalTo: medalView.widthAnchor),
+            medalView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            medalView.widthAnchor.constraint(equalToConstant: Self.arcWidth),
         ])
     }
 

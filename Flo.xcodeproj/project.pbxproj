@@ -20,6 +20,8 @@
 		A3236303299D481D00E6C6C3 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3236302299D481D00E6C6C3 /* PushButton.swift */; };
 		A3236307299EE47C00E6C6C3 /* MainViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3236306299EE47C00E6C6C3 /* MainViewController+Actions.swift */; };
 		A3236309299EEF1C00E6C6C3 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3236308299EEF1C00E6C6C3 /* GraphView.swift */; };
+		A323630B29A001D800E6C6C3 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323630A29A001D800E6C6C3 /* BackgroundView.swift */; };
+		A323630D29A2817600E6C6C3 /* MedalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A323630C29A2817600E6C6C3 /* MedalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		A3236302299D481D00E6C6C3 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		A3236306299EE47C00E6C6C3 /* MainViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+Actions.swift"; sourceTree = "<group>"; };
 		A3236308299EEF1C00E6C6C3 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		A323630A29A001D800E6C6C3 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		A323630C29A2817600E6C6C3 /* MedalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +100,11 @@
 		A32362FE299D410A00E6C6C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A323630C29A2817600E6C6C3 /* MedalView.swift */,
 				A3236300299D415E00E6C6C3 /* CounterView.swift */,
 				A3236308299EEF1C00E6C6C3 /* GraphView.swift */,
 				A3236302299D481D00E6C6C3 /* PushButton.swift */,
+				A323630A29A001D800E6C6C3 /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,7 +193,9 @@
 				A32362E6299D391100E6C6C3 /* MainViewController.swift in Sources */,
 				A3236309299EEF1C00E6C6C3 /* GraphView.swift in Sources */,
 				A3236303299D481D00E6C6C3 /* PushButton.swift in Sources */,
+				A323630D29A2817600E6C6C3 /* MedalView.swift in Sources */,
 				A32362FD299D405B00E6C6C3 /* ConstraintConsts.swift in Sources */,
+				A323630B29A001D800E6C6C3 /* BackgroundView.swift in Sources */,
 				A32362F7299D403A00E6C6C3 /* UIView+Preview.swift in Sources */,
 				A32362F9299D404200E6C6C3 /* UIViewController+Preview.swift in Sources */,
 				A32362E2299D391100E6C6C3 /* AppDelegate.swift in Sources */,

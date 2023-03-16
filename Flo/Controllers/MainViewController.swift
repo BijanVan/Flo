@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
 
     let addButton = PushButton()
     let removeButton = PushButton()
+    let backgroundView = BackgroundView()
     let counterView = CounterView()
     let graphView = GraphView()
 
@@ -30,15 +31,24 @@ class MainViewController: UIViewController {
     private func prepareSubviews() {
         addButton.translatesAutoresizingMaskIntoConstraints = false
         removeButton.translatesAutoresizingMaskIntoConstraints = false
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
         counterView.translatesAutoresizingMaskIntoConstraints = false
         graphView.translatesAutoresizingMaskIntoConstraints = false
 
+        view.addSubview(backgroundView)
         view.addSubview(counterView)
         view.addSubview(graphView)
         view.addSubview(addButton)
         view.addSubview(removeButton)
         
         let guide = view.safeAreaLayoutGuide
+        NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: guide.topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
+        ])
+
         NSLayoutConstraint.activate([
             counterView.topAnchor.constraint(equalTo: guide.topAnchor),
             counterView.centerXAnchor.constraint(equalTo: guide.centerXAnchor),
@@ -67,10 +77,13 @@ class MainViewController: UIViewController {
     }
 
     private func styleSubviews() {
+        backgroundView.patternSize = view.bounds.width / 2
+
         counterView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapView(_:))))
         counterView.counterColor = .systemGray2
         counterView.outlineColor = .systemGray
         counterView.isHidden = isGraphViewShowing
+        counterView.medalView.isHidden = true
 
         graphView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapView(_:))))
         graphView.isHidden = !isGraphViewShowing
